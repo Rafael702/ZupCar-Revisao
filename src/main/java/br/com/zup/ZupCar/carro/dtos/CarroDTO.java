@@ -1,7 +1,6 @@
 package br.com.zup.ZupCar.carro.dtos;
 
 public class CarroDTO {
-    private String nome;
     private String modelo;
     private String cor;
     private String motor;
@@ -11,20 +10,11 @@ public class CarroDTO {
 
     }
 
-    public CarroDTO(String modelo, String cor, String motor, String ano,String nome) {
+    public CarroDTO(String modelo, String cor, String motor, String ano) {
         this.modelo = modelo;
         this.cor = cor;
         this.motor = motor;
         this.ano = ano;
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getModelo() {
