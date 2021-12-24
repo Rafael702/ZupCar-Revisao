@@ -36,4 +36,9 @@ public class CarroController {
     public HashMap<String, URI> atualizarCarro(@PathVariable String nomeDoCarro, @RequestBody CarroDTO carroJson) {
         return carroService.atualizarCarro(nomeDoCarro, carroJson);
     }
+
+    @DeleteMapping("/{nomeDoCarro}")
+    public void deletarCarro(@PathVariable String nomeDoCarro) {
+        carroService.deletarCarroDaLista(nomeDoCarro);
+    }
 }

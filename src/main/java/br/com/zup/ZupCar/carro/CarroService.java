@@ -4,8 +4,10 @@ import br.com.zup.ZupCar.carro.dtos.CarroDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.servlet.mvc.method.annotation.UriComponentsBuilderMethodArgumentResolver;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.xml.transform.URIResolver;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,5 +53,11 @@ public class CarroService {
 
         return retorno;
 
+    }
+
+    public void deletarCarroDaLista(String nomeDoCarro) {
+        CarroDTO carroASerDeletado = exibirCarro(nomeDoCarro);
+
+        concessionaria.remove(carroASerDeletado);
     }
 }
